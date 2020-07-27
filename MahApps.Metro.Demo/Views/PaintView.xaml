@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="MahAppsMetro.Demo.Views.PaintView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MahAppsMetro.Demo.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="Black">
+    <!--<UserControl.Background>
+        <ImageBrush ImageSource="/Resources/Images/Img433400170.jpeg" />
+    </UserControl.Background>-->
+    <TabControl>
+        <TabItem Header="1111">
+            <UniformGrid>
+                <Path  Opacity="0.7" Fill="RoyalBlue">
+                    <Path.Data>
+                        <PathGeometry>
+                            <PathFigure StartPoint="1,24" IsClosed="True">
+                                <LineSegment Point="35,58"/>
+                                <ArcSegment Size="55,20" Point="59,48" SweepDirection="Clockwise"/>
+                                <LineSegment Point="59,1"/>
+                                <ArcSegment Size="80,80" Point="1,24" SweepDirection="Counterclockwise"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Path.Data>
+                </Path>
+                <Path  Opacity="0.7"  SnapsToDevicePixels="True">
+                    <Path.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="20" Color="White" />
+                    </Path.Effect>
+                    <Path.Fill>
+                        <RadialGradientBrush Center="0.5,0.5">
+                            <GradientStop Offset="0" Color="White" />
+                            <GradientStop Offset="0.1" Color="White" />
+                            <GradientStop Offset="0.9" Color="RoyalBlue" />
+                        </RadialGradientBrush>
+                    </Path.Fill>
+                    <Path.Data>
+                        <GeometryGroup>
+                            <EllipseGeometry RadiusX="30" RadiusY="30" Center="60,60" />
+                            <EllipseGeometry RadiusX="50" RadiusY="50" Center="60,60" />
+                        </GeometryGroup>
+                    </Path.Data>
+                </Path>
+                <Rectangle x:Name="rect" Fill="RoyalBlue" Width="50" Height="50" Stroke="LightBlue" StrokeDashArray="10" StrokeThickness="5">
+                    <Rectangle.Triggers>
+                        <EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard>
+                                <Storyboard RepeatBehavior="Forever" BeginTime="00:00:01" Duration="00:00:02">
+                                    <DoubleAnimation Storyboard.TargetProperty="StrokeDashOffset" Storyboard.TargetName="rect" From="0" To="-20"></DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Rectangle.Triggers>
+                </Rectangle>
+                <Grid>
+                    <Ellipse Width="100" Height="100" StrokeThickness="2" Stroke="DarkTurquoise"/>
+                    <Ellipse Width="100" Height="100" StrokeThickness="2" Stroke="DarkTurquoise" Margin="200,0,0,0"/>
+                    <Ellipse Width="100" Height="100" StrokeThickness="2" Stroke="DarkTurquoise" Margin="100,0,0,100"/>
+                    <Ellipse Width="100" Height="100" StrokeThickness="2" Stroke="DarkTurquoise" Margin="100,100,0,0"/>
+                </Grid>
+            </UniformGrid>
+        </TabItem>
+        <TabItem Header="2222">
+            <Grid>
+                <Canvas x:Name="canvas2">
+                </Canvas>
+
+                <Polyline Points="100,100 150,250 200,110 300,250" StrokeDashArray="100 100" Stroke="DodgerBlue"/>
+                <Button Content="画条随机曲线" Click="Button_Click" Tag="draw2" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="3333">
+            <Canvas x:Name="canvas3">
+                <Image x:Name="image3"/>
+            </Canvas>
+        </TabItem>
+    </TabControl>
+</UserControl>

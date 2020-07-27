@@ -1,0 +1,106 @@
+﻿<metro:MetroWindow x:Class="MahAppsMetro.Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   xmlns:views="clr-namespace:MahAppsMetro.Demo.Views"
+                   xmlns:AvalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+                   xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        Title="MainWindow" Height="700" Width="940" WindowStartupLocation="CenterScreen" ShowTitleBar="True" Topmost="False">
+    <metro:MetroWindow.RightWindowCommands>
+        <metro:WindowCommands>
+            <Button Content="Deep" x:Name="btnDeep" Click="btnDeep_Click" />
+        </metro:WindowCommands>
+    </metro:MetroWindow.RightWindowCommands>
+    <Grid>
+        <metro:MetroAnimatedTabControl  TabStripPlacement="Left" metro:TabControlHelper.Underlined="TabPanel">
+            <metro:MetroAnimatedTabControl.Resources>
+                <Style TargetType="metro:MetroTabItem">
+                    <Setter Property="metro:ControlsHelper.HeaderFontSize" Value="18" />
+                </Style>
+            </metro:MetroAnimatedTabControl.Resources>
+            <metro:MetroTabItem Header="Brushes">
+                <views:BrushesView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="SystemColor">
+                <views:SystemColorsView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="CotrolTemplate">
+                <views:ControlTemplat />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="TabControls">
+                <views:TabControlsView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="SocketView">
+                <views:SocketView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="DragView">
+                <views:DragView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="AnimationView">
+                <views:AnimationView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="ConnectionView">
+                <views:ConnectionView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="Base64">
+                <views:ConverterView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="MenuView">
+                <views:MenuView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="VoiceView">
+                <views:VoiceView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="RadialPanel">
+                <views:PanelView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="PaintView">
+                <views:PaintView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="DrawingCanvas">
+                <views:DrawingCanvas />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="TreeView">
+                <views:TreeViews />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="WorkSpaceView">
+                <views:WorkSpaceView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="ImageView">
+                <views:ImageView />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="分页控件">
+                <DockPanel  x:Name="datapager">
+                    <views:DataPager DockPanel.Dock="Bottom" PageCount="{Binding PageCount}" HorizontalAlignment="Center" NavigateCommand="{Binding NavigateCommand}" />
+                    <ListBox ItemsSource="{Binding CurrentSource}" />
+                </DockPanel>
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="聊天">
+                <views:ImageEditor />
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="聊天">
+                <Path>
+                    <Path.Fill>
+                        <RadialGradientBrush GradientOrigin="1,0.5">
+                            <RadialGradientBrush.GradientStops>
+                                <GradientStop Offset="0.8" Color="Gold"/>
+                                <GradientStop Offset="1" Color="Blue"/>
+                            </RadialGradientBrush.GradientStops>
+                        </RadialGradientBrush>
+                    </Path.Fill>
+                    <Path.Data>
+                        <CombinedGeometry GeometryCombineMode="Exclude">
+                            <CombinedGeometry.Geometry1>
+                                <EllipseGeometry Center="150,150" RadiusX="150" RadiusY="150"/>
+                            </CombinedGeometry.Geometry1>
+                            <CombinedGeometry.Geometry2>
+                                <EllipseGeometry Center="170,150" RadiusX="135" RadiusY="140"/>
+                            </CombinedGeometry.Geometry2>
+                        </CombinedGeometry>
+                    </Path.Data>
+                </Path>
+            </metro:MetroTabItem>
+        </metro:MetroAnimatedTabControl>
+        
+    </Grid>
+</metro:MetroWindow>

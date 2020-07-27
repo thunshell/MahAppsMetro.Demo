@@ -1,0 +1,93 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MahAppsMetro.Demo.Views"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="MahAppsMetro.Demo.Views.ImageEditor"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <Grid Margin="10,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Width="30" Height="30" Fill="Orange" VerticalAlignment="Top" />
+                    <DockPanel Grid.Column="1">
+                        <TextBlock Text="【管理员】菠萝吹雪" Margin="15,0" DockPanel.Dock="Top" />
+                        <Border Margin="0,5">
+                            <Grid HorizontalAlignment="Left">
+                                <Border Margin="10,0,0,0"  CornerRadius="10" Background="#EEE"/>
+                                <Path HorizontalAlignment="Left" Fill="#EEE" Data="M10,0 0,5 10,10" Margin="0,10,0,0"/>
+                                <Border HorizontalAlignment="Left" VerticalAlignment="Bottom" Padding="20,10,10,10">
+                                    <TextBlock Text="图片与web服务器完全脱离，单独和数据库服务器在一起" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                </Grid>
+                <TextBlock Text="17:30:26" TextAlignment="Center" Padding="0,20,0,0"/>
+                <Grid Margin="10,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Grid.Column="1" Width="30" Height="30" Fill="BlueViolet" VerticalAlignment="Top" />
+                    <DockPanel Grid.Column="0" HorizontalAlignment="Right">
+                        <TextBlock Text="【管理员】菠萝吹雪" Margin="15,0" DockPanel.Dock="Top" Visibility="Collapsed"/>
+                        <Border Margin="0,5">
+                            <Grid HorizontalAlignment="Left">
+                                <Border Margin="0,0,10,0"  CornerRadius="10" Background="#EEE"/>
+                                <Path HorizontalAlignment="Right" Fill="#EEE" Data="M0,0 10,5 0,10" Margin="0,10,0,0"/>
+                                <Border HorizontalAlignment="Left" VerticalAlignment="Bottom" Padding="10,10,20,10">
+                                    <TextBlock Text="图片与web服务器完全脱离，单独和数据库服务器在一起" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                </Grid>
+                <Grid Margin="10,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Width="30" Height="30" Fill="Orange" VerticalAlignment="Top" />
+                    <DockPanel Grid.Column="1">
+                        <TextBlock Text="【管理员】菠萝吹雪" Margin="15,0" DockPanel.Dock="Top" />
+                        <Border Margin="0,5">
+                            <Grid HorizontalAlignment="Left">
+                                <Border Margin="10,0,0,0"  CornerRadius="10" Background="#EEE"/>
+                                <Path HorizontalAlignment="Left" Fill="#EEE" Data="M10,0 0,5 10,10" Margin="0,10,0,0"/>
+                                <Border HorizontalAlignment="Left" VerticalAlignment="Bottom" MinHeight="30" MinWidth="50" Padding="20,10,10,10">
+                                    <RichTextBox  BorderThickness="0" HorizontalAlignment="Left" Background="Transparent" IsReadOnly="True">
+                                        <FlowDocument>
+                                            <Paragraph LineHeight="8">
+                                                图片与web服务器完全脱离，单独和数据库服务器在一起
+                                            </Paragraph>
+                                            <Paragraph LineHeight="8">
+                                                图片与web服务器完全脱离，单独和数据库服务器在一起
+                                            </Paragraph>
+                                        </FlowDocument>
+                                    </RichTextBox>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                </Grid>
+            </StackPanel>
+
+            <DockPanel Grid.Row="1">
+                <RichTextBox x:Name="tbReply" MinHeight="100" DockPanel.Dock="Top" BorderThickness="0">
+                </RichTextBox>
+            </DockPanel>
+            <GridSplitter Grid.Row="1" Height="2" VerticalAlignment="Top" Focusable="False" HorizontalAlignment="Stretch"/>
+        </Grid>
+    </Grid>
+</UserControl>

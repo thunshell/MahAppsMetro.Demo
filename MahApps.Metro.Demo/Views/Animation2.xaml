@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="MahAppsMetro.Demo.Views.Animation2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MahAppsMetro.Demo.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="DeepSkyBlue" />
+            <Setter Property="FontSize" Value="30" />
+        </Style>
+    </UserControl.Resources>
+    <UniformGrid>
+        <Canvas x:Name="panel1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100">
+            <TextBlock Text="E" />
+            <TextBlock Text="-"   Canvas.Left="15"/>
+            <TextBlock Text="P"   Canvas.Left="29" />
+            <TextBlock Text="r"   Canvas.Left="47" />
+            <TextBlock Text="i"    Canvas.Left="58"/>
+            <TextBlock Text="n"   Canvas.Left="66" />
+            <TextBlock Text="t"  Canvas.Left="84" />
+        </Canvas>
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="110" Height="100" ClipToBounds="True">
+            <TextBlock x:Name="tbName" Background="DeepSkyBlue" Foreground="White" Text="E-print" Width="100" Height="40" Margin="0,-20,0,0" VerticalAlignment="Top" TextAlignment="Center" />
+            <Border Background="DeepSkyBlue" Height="20" VerticalAlignment="Top" />
+        </Grid>
+    </UniformGrid>
+</UserControl>
